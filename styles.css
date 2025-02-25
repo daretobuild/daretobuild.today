@@ -64,7 +64,7 @@ nav ul li a:hover {
 /* Hero Section */
 .hero {
     position: relative;
-    height: 500px;
+    height: 820px;
     background: url('https://www.worktodo.today/assets/images/Screenmockup.png') no-repeat center center/cover; /* Replace with WorkToDo.today image */
     display: flex;
     align-items: center;
