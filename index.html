@@ -5,67 +5,138 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dare to Build - Build Your Dreams Boldly</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
     <!-- Header -->
-    <header>
-        <div class="container">
-            <div class="logo">Dare to Build</div>
-            <nav>
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#products">Products</a></li>
-                    <li><a href="#about">About Us</a></li>
-                </ul>
-            </nav>
+    <nav class="bg-white border-b border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-center h-16">
+                <div class="flex items-center space-x-8">
+                    <div class="flex-shrink-0">
+                        <img alt="Logo with text 'DTB today'" class="h-8 w-auto" src="assets/images/dtb.png"/>
+                    </div>
+                    <a class="text-[#181D27] inline-flex items-center px-1 pt-1 border-b-2 border-transparent leading-[24px] text-[16px] font-[600]" href="#">
+                        Home
+                    </a>
+                    <a class="text-[#535862] inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-[18px] font-[600]" href="#about">
+                        About
+                    </a>
+                </div>
+            </div>
         </div>
-    </header>
+    </nav>
+
 
     <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <h1>Build Your Dreams Boldly</h1>
-            <p>Solving our challenges first, then yours—through innovative products.</p>
-            <a href="#products" class="cta-button">See Our Products</a>
+    <section  class="flex relative md:h-[607px] max-sm:h-[410px] items-center justify-center text-center color-#fff overflow-hidden ">
+        <div class="text-center">
+            <h1 class="text-[60px] max-sm:text-[34px] md:font-[600] max-sm:font-[400] leading-[72px] text-[#181D27]">Build Your Dreams Boldly</h1>
+            <p class="mt-4 text-[20px] font-[400] text-gray-500">Solving our challenges first, then yours—through innovative products.</p>
         </div>
     </section>
 
     <!-- Products Section -->
-    <section id="products" class="products">
-        <div class="container">
-            <h2>Products</h2>
-            <div class="product-list">
-                <div class="product-item">
-                    <h3>WorkToDo.today</h3>
-                    <p>Plan and track tasks with ease. Built for productivity.</p>
-                    <a href="https://worktodo.today/" target="_blank" class="product-link">Try It Now</a>
+    <section  class="products hidden">
+        <div class="max-sm:container  ">
+            <div class="flex items-center justify-center">
+            <h1 class="text-4xl font-bold mb-4">Products</h1>
+        </div>
+        <div class="flex items-center justify-center">
+            <p class="text-lg text-center text-gray-600 mb-12">Ready to try something amazing? Explore our products.</p>
+        </div>
+            <div class="flex max-sm:flex-col md:flex-row justify-center items-center space-y-8 md:space-y-0 md:space-x-8">
+                <!-- workToDo -->
+                <div class="flex flex-col p-8 w-[384px]">
+                    <div class="flex items-center justify-center">
+                    <h2 class="text-xl font-semibold mb-4">WorkToDo.today</h2>
                 </div>
-                <div class="product-item coming-soon">
-                    <h3>Learner.today <span class="flag">Coming Soon</span></h3>
-                    <p>Micro-learning to master skills quickly.</p>
+                <div class="flex items-center justify-center">
+                    <p class="text-gray-600 text-center mb-6">Plan and track tasks with ease. Built for productivity.</p>
                 </div>
-                <div class="product-item coming-soon">
-                    <h3>Examples.today <span class="flag">Coming Soon</span></h3>
-                    <p>Instant examples for anything you need.</p>
+                <div class="flex items-center justify-center">
+                    <button class="bg-white w-[213px] text-black border border-gray-300 rounded px-6 py-2">Try Now</button>
+                </div>
+                </div>
+                <!-- learnerToday -->
+                <div class="flex flex-col p-8 w-[384px]">
+                    <div class="flex items-center justify-center ">
+                    <h2 class="text-xl font-semibold mb-4">Learner.today</h2>
+                </div>
+                <div class="flex items-center justify-center">
+                    <p class="text-gray-600 text-center mb-6">Micro-learning to master skills quickly.</p>
+                </div>
+                <div class="flex items-center justify-center">
+                <button class="mt-4 px-3 py-1 bg-[#F5F5F5] text-[#B9BABA] rounded-full cursor-not-allowed text-sm">Coming Soon</button>
+            </div>
+                </div>
+                <!-- examplesToday -->
+                <div class="flex flex-col p-8 w-[384px]">
+                    <div class="flex items-center justify-center mb-4">
+                    <h2 class="text-xl font-semibold ">Examples.today</h2>
+                </div>
+                <div class="flex items-center justify-center">
+                    <p class="text-gray-600 text-center mb-6">Instant examples for anything you need.</p>
+                </div>
+                <div class="flex items-center justify-center">
+                    <button class="mt-4 px-3 py-1 bg-[#F5F5F5] text-[#B9BABA] rounded-full cursor-not-allowed text-sm">Coming Soon</button>
+                </div>
                 </div>
             </div>
         </div>
     </section>
+    <!-- Subscribe Section -->
+    <section class="container subscribe">
+        <div class="flex flex-col text-center mb-[85px] p-6 ">
+            <div class="flex items-center justify-center">
+            <h1 class="md:text-[36px] max-sm:text-[30px] font-[600] mb-4">Stay Ahead with DareToBuild!</h1>
+        </div>
+        <div class="flex items-center justify-center">
+            <p class="text-[#535862] text-[20px] md:px-[74px] mb-6">Subscribe to the DareToBuild newsletter for the latest updates on AI, cutting-edge tools, and inspiring startup stories. Don't miss out—join the community of builders today!</p>
+        </div>
+        <div class="flex items-center justify-center">
+            <button class="bg-black text-[#FFFFFF] py-[18px] px-[22px] rounded-[11px] border-[1px] text-[22px] hover:bg-gray-800">Subscribe Now</button>
+        </div>
+        </div>
+
+    </section>
 
     <!-- About Us Section -->
-    <section id="about" class="about">
-        <div class="container">
-            <h2>About Us</h2>
-            <p>We’re a team passionate about building solutions that work for us—and then sharing them with you. Dare to Build is about creating fast, dreaming big, and shipping boldly.</p>
+    <section id="about" class="container subscribe">
+        <div class="flex flex-col text-center md:mb-[123px] max-sm:mb-[85px] p-6 ">
+            <div class="flex items-center justify-center">
+            <h2 class="md:text-[36px] max-sm:text-[30px] font-[600] leading-[44px] mb-4">About Us</h2>
         </div>
+        <div class="flex items-center justify-center max-w-2xl mx-auto">
+            <p class="text-[#535862] text-center text-[20px]  ">We’re a team passionate about building solutions that work for us—and then sharing them with you. Dare to Build is about creating fast, dreaming big, and shipping boldly.</p>
+        </div>
+        
+        </div>
+
     </section>
 
     <!-- Footer -->
-    <footer>
-        <div class="container">
-            <p>© 2025 Dare to Build. All rights reserved.</p>
-            <a href="mailto:contact@daretobuild.today" class="footer-link">Contact Us</a>
+    <footer class="container border-t border-gray-200 py-4">
+        <div class=" mx-auto flex justify-between my-[34px] items-center">
+            <div class="flex items-center">
+                <img alt="DTB logo" class="h-8 w-[auto] hidden sm:block" height="50" src="assets/images/foot.png" width="50"/>
+               
+            </div>
+            <div class="flex space-x-4 text-gray-600">
+                <a class="hover:underline md:ml-[219px]" href="/privacypolicy.html">
+                    Privacy Policy
+                </a>
+                <a class="hover:underline" href="/termsofservices.html">
+                    Terms of Use
+                </a>
+            </div>
+            <div class="text-gray-600">
+                © 2025 Daretobuild.Today All rights reserved.
+            </div>
         </div>
     </footer>
 </body>
