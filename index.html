@@ -39,122 +39,157 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-    <!-- Header -->
-    <nav class="bg-white border-b border-gray-200">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-center h-16">
-                <div class="flex items-center space-x-8">
-                    <div class="flex">
-                        <img alt="Logo with text 'DTB today'" class="max-w-[100px]" src="assets/images/dtb.png"/>
+
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
+
+    
+  <script>
+        tailwind.config = {
+            theme: {
+              extend: {
+                colors: {
+                ...{"transparent":"transparent","current":"currentColor","black":"#000000","white":"#ffffff","gray":{"50":"#f9fafb","100":"#f3f4f6","200":"#e5e7eb","300":"#d1d5db","400":"#9ca3af","500":"#6b7280","600":"#4b5563","700":"#374151","800":"#1f2937","900":"#111827"},"red":{"50":"#fef2f2","100":"#fee2e2","200":"#fecaca","300":"#fca5a5","400":"#f87171","500":"#ef4444","600":"#dc2626","700":"#b91c1c","800":"#991b1b","900":"#7f1d1d"},"yellow":{"50":"#fffbeb","100":"#fef3c7","200":"#fde68a","300":"#fcd34d","400":"#fbbf24","500":"#f59e0b","600":"#d97706","700":"#b45309","800":"#92400e","900":"#78350f"},"green":{"50":"#ecfdf5","100":"#d1fae5","200":"#a7f3d0","300":"#6ee7b7","400":"#34d399","500":"#10b981","600":"#059669","700":"#047857","800":"#065f46","900":"#064e3b"},"blue":{"50":"#eff6ff","100":"#dbeafe","200":"#bfdbfe","300":"#93c5fd","400":"#60a5fa","500":"#3b82f6","600":"#2563eb","700":"#1d4ed8","800":"#1e40af","900":"#1e3a8a"},"indigo":{"50":"#eef2ff","100":"#e0e7ff","200":"#c7d2fe","300":"#a5b4fc","400":"#818cf8","500":"#6366f1","600":"#4f46e5","700":"#4338ca","800":"#3730a3","900":"#312e81"},"purple":{"50":"#f5f3ff","100":"#ede9fe","200":"#ddd6fe","300":"#c4b5fd","400":"#a78bfa","500":"#8b5cf6","600":"#7c3aed","700":"#6d28d9","800":"#5b21b6","900":"#4c1d95"},"pink":{"50":"#fdf2f8","100":"#fce7f3","200":"#fbcfe8","300":"#f9a8d4","400":"#f472b6","500":"#ec4899","600":"#db2777","700":"#be185d","800":"#9d174d","900":"#831843"}},
+                ...{"primary":{"50":"var(--color-primary-50)","100":"var(--color-primary-100)","200":"var(--color-primary-200)","300":"var(--color-primary-300)","400":"var(--color-primary-400)","500":"var(--color-primary-500)","600":"var(--color-primary-600)","700":"var(--color-primary-700)","800":"var(--color-primary-800)","900":"var(--color-primary-900)","DEFAULT":"var(--color-primary)","focus":"var(--color-primary-focus)","content":"var(--color-primary-content)"},"secondary":{"50":"var(--color-secondary-50)","100":"var(--color-secondary-100)","200":"var(--color-secondary-200)","300":"var(--color-secondary-300)","400":"var(--color-secondary-400)","500":"var(--color-secondary-500)","600":"var(--color-secondary-600)","700":"var(--color-secondary-700)","800":"var(--color-secondary-800)","900":"var(--color-secondary-900)","DEFAULT":"var(--color-secondary)","focus":"var(--color-secondary-focus)","content":"var(--color-secondary-content)"},"accent":{"50":"var(--color-accent-50)","100":"var(--color-accent-100)","200":"var(--color-accent-200)","300":"var(--color-accent-300)","400":"var(--color-accent-400)","500":"var(--color-accent-500)","600":"var(--color-accent-600)","700":"var(--color-accent-700)","800":"var(--color-accent-800)","900":"var(--color-accent-900)","DEFAULT":"var(--color-accent)","focus":"var(--color-accent-focus)","content":"var(--color-accent-content)"},"neutral":{"50":"var(--color-neutral-50)","100":"var(--color-neutral-100)","200":"var(--color-neutral-200)","300":"var(--color-neutral-300)","400":"var(--color-neutral-400)","500":"var(--color-neutral-500)","600":"var(--color-neutral-600)","700":"var(--color-neutral-700)","800":"var(--color-neutral-800)","900":"var(--color-neutral-900)","DEFAULT":"var(--color-neutral)","focus":"var(--color-neutral-focus)","content":"var(--color-neutral-content)"},"info":{"50":"var(--color-info-50)","100":"var(--color-info-100)","200":"var(--color-info-200)","300":"var(--color-info-300)","400":"var(--color-info-400)","500":"var(--color-info-500)","600":"var(--color-info-600)","700":"var(--color-info-700)","800":"var(--color-info-800)","900":"var(--color-info-900)","DEFAULT":"var(--color-info)","focus":"var(--color-info-focus)","content":"var(--color-info-content)"},"success":{"50":"var(--color-success-50)","100":"var(--color-success-100)","200":"var(--color-success-200)","300":"var(--color-success-300)","400":"var(--color-success-400)","500":"var(--color-success-500)","600":"var(--color-success-600)","700":"var(--color-success-700)","800":"var(--color-success-800)","900":"var(--color-success-900)","DEFAULT":"var(--color-success)","focus":"var(--color-success-focus)","content":"var(--color-success-content)"},"warning":{"50":"var(--color-warning-50)","100":"var(--color-warning-100)","200":"var(--color-warning-200)","300":"var(--color-warning-300)","400":"var(--color-warning-400)","500":"var(--color-warning-500)","600":"var(--color-warning-600)","700":"var(--color-warning-700)","800":"var(--color-warning-800)","900":"var(--color-warning-900)","DEFAULT":"var(--color-warning)","focus":"var(--color-warning-focus)","content":"var(--color-warning-content)"},"error":{"50":"var(--color-error-50)","100":"var(--color-error-100)","200":"var(--color-error-200)","300":"var(--color-error-300)","400":"var(--color-error-400)","500":"var(--color-error-500)","600":"var(--color-error-600)","700":"var(--color-error-700)","800":"var(--color-error-800)","900":"var(--color-error-900)","DEFAULT":"var(--color-error)","focus":"var(--color-error-focus)","content":"var(--color-error-content)"},"danger":{"50":"var(--color-error-50)","100":"var(--color-error-100)","200":"var(--color-error-200)","300":"var(--color-error-300)","400":"var(--color-error-400)","500":"var(--color-error-500)","600":"var(--color-error-600)","700":"var(--color-error-700)","800":"var(--color-error-800)","900":"var(--color-error-900)","DEFAULT":"var(--color-error)","focus":"var(--color-error-focus)","content":"var(--color-error-content)"},"failure":{"50":"var(--color-error-50)","100":"var(--color-error-100)","200":"var(--color-error-200)","300":"var(--color-error-300)","400":"var(--color-error-400)","500":"var(--color-error-500)","600":"var(--color-error-600)","700":"var(--color-error-700)","800":"var(--color-error-800)","900":"var(--color-error-900)","DEFAULT":"var(--color-error)","focus":"var(--color-error-focus)","content":"var(--color-error-content)"}},
+                },
+              },
+            },
+            variants: {
+              extend: {
+                backgroundColor: ['active', 'group-hover'],
+                textColor: ['active', 'group-hover'],
+              },
+            },
+            plugins: [],
+          };
+  </script>
+
+</head>
+
+              <body class="h-full text-base-content">
+                <div id="root" class="min-h-screen bg-gray-50">
+    <header id="header" class="fixed w-full bg-white/80 backdrop-blur-md z-50 border-b border-gray-100">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-2">
+                    <i class="fa-solid fa-rocket text-2xl text-black"></i>
+                    <span class="text-xl font-bold">DareToBuild</span>
+                </div>
+                <nav class="hidden md:flex space-x-8">
+                    <span class="text-gray-600 hover:text-black cursor-pointer">Newsletter</span>
+                    <span class="text-gray-600 hover:text-black cursor-pointer">Mentorship</span>
+                    <span class="text-gray-600 hover:text-black cursor-pointer">Community</span>
+                </nav>
+                <div class="flex items-center space-x-4">
+                    <button class="hidden md:block px-6 py-2 rounded-lg border border-gray-200 hover:border-black transition-colors">
+                        Sign In
+                    </button>
+                    <button class="flex items-center px-6 py-2 bg-black text-white rounded-lg hover:bg-gray-800 transition-colors">
+                        <i class="fa-brands fa-slack mr-2"></i>
+                        Join Slack
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="hero" class="h-[800px] flex items-center justify-center bg-gradient-to-b from-gray-50 to-white">
+        <div class="container mx-auto px-6 text-center">
+            <h1 class="text-6xl md:text-7xl font-bold mb-6">Build Your Dreams <span class="text-transparent bg-clip-text bg-gradient-to-r from-gray-800 to-gray-500">Boldly</span></h1>
+            <p class="text-xl text-gray-600 max-w-2xl mx-auto">Transform your ideas into reality with our supportive community of builders, mentors, and innovators.</p>
+        </div>
+    </section>
+
+    <section id="newsletter" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="space-y-6">
+                    <h2 class="text-4xl font-bold">Stay Ahead with AI Insights</h2>
+                    <p class="text-gray-600 text-lg">Get weekly curated insights about AI and product building delivered straight to your inbox.</p>
+                    <div class="flex gap-4">
+                        <input type="email" placeholder="Enter your email" class="flex-1 px-6 py-3 rounded-lg border border-gray-200 focus:border-black outline-none">
+                        <button class="px-8 py-3 bg-black text-white rounded-lg hover:bg-gray-800 transition-colors whitespace-nowrap">
+                            Subscribe Now
+                        </button>
                     </div>
-                    <a class="text-[#181D27] inline-flex items-center rounded-[6px]  leading-[24px] text-[16px] font-[600]" href="/">
-                        Home
-                    </a>
-                    <a class="text-[#535862] inline-flex items-center   text-[16px] font-[600]" href="#about">
-                        About
-                    </a>
-                    <a class="text-[#535862] inline-flex items-center   text-[16px] font-[600]" href="https://insights.daretobuild.today">
-                        Posts
-                    </a>
                 </div>
-            </div>
-        </div>
-    </nav>
-
-
-    <!-- Hero Section -->
-    <section  class="flex relative md:h-[607px] max-sm:h-[410px] items-center justify-center text-center color-#fff overflow-hidden ">
-        <div class="text-center">
-            <h1 class="text-[60px] max-sm:text-[30px] md:text-[60px] sm:text-[46px] md:font-[600] max-sm:font-[400] leading-[72px] text-[#181D27]">Build Your Dreams Boldly</h1>
-            <p class="mt-4 text-[20px] font-[400] text-gray-500">Solving our challenges first, then yours—through innovative products.</p>
-        </div>
-    </section>
-
-    <!-- Products Section -->
-    <section  class="products hidden">
-        <div class="max-sm:container  ">
-            <div class="flex items-center justify-center">
-            <h2 class="text-4xl font-bold mb-4">Products</h2>
-        </div>
-        <div class="flex items-center justify-center">
-            <p class="text-lg text-center text-gray-600 mb-12">Ready to try something amazing? Explore our products.</p>
-        </div>
-            <div class="flex max-sm:flex-col md:flex-row justify-center items-center space-y-8 md:space-y-0 md:space-x-8">
-                <!-- workToDo -->
-                <div class="flex flex-col p-8 w-[384px]">
-                    <div class="flex items-center justify-center">
-                    <h2 class="text-xl font-semibold mb-4">Worktodo.today</h2>
-                </div>
-                <div class="flex items-center justify-center">
-                    <p class="text-gray-600 text-center mb-6">Plan and track tasks with ease. Built for productivity.</p>
-                </div>
-                <div class="flex items-center justify-center">
-                    <button class="bg-white w-[213px] text-black border border-gray-300 rounded px-6 py-2">Try Now</button>
-                </div>
-                </div>
-                <!-- learnerToday -->
-                <div class="flex flex-col p-8 w-[384px]">
-                    <div class="flex items-center justify-center ">
-                    <h2 class="text-xl font-semibold mb-4">Learner.today</h2>
-                </div>
-                <div class="flex items-center justify-center">
-                    <p class="text-gray-600 text-center mb-6">Micro-learning to master skills quickly.</p>
-                </div>
-                <div class="flex items-center justify-center">
-                <button class="mt-4 px-3 py-1 bg-[#F5F5F5] text-[#B9BABA] rounded-full cursor-not-allowed text-sm">Coming Soon</button>
-            </div>
-                </div>
-                <!-- examplesToday -->
-                <div class="flex flex-col p-8 w-[384px]">
-                    <div class="flex items-center justify-center mb-4">
-                    <h2 class="text-xl font-semibold ">Examples.today</h2>
-                </div>
-                <div class="flex items-center justify-center">
-                    <p class="text-gray-600 text-center mb-6">Instant examples for anything you need.</p>
-                </div>
-                <div class="flex items-center justify-center">
-                    <button class="mt-4 px-3 py-1 bg-[#F5F5F5] text-[#B9BABA] rounded-full cursor-not-allowed text-sm">Coming Soon</button>
-                </div>
+                <div class="relative h-[400px]">
+                    <img class="absolute inset-0 rounded-2xl object-cover" src="assets/images/newsletter.png" alt="3D illustration of a futuristic newsletter concept with floating screens and AI elements, modern minimal style">
                 </div>
             </div>
         </div>
     </section>
-    <!-- Subscribe Section -->
-    <section class="container subscribe">
-        <div class="flex flex-col text-center mb-[85px] p-6 ">
-            <div class="flex items-center justify-center">
-            <h2 class="md:text-[36px] max-sm:text-[30px] font-[600] mb-4">Stay Ahead with DareToBuild!</h2>
-        </div>
-        <div class="flex items-center justify-center">
-            <p class="text-[#535862] text-[20px] md:px-[74px] mb-6">Subscribe to the DareToBuild newsletter for the latest updates on AI, cutting-edge tools, and inspiring startup stories. Don't miss out—join the community of builders today!</p>
-        </div>
-        <div class="flex items-center justify-center">
-            <button class="bg-black text-[#FFFFFF] py-[18px] px-[22px] rounded-[11px] border-[1px] text-[22px] hover:bg-gray-800"><a href="https://insights.daretobuild.today/subscribe">Subscribe Now</a></button>
-        </div>
-        </div>
 
+    <section id="mentorship" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4">Accelerate Your Journey</h2>
+                <p class="text-gray-600 text-lg max-w-2xl mx-auto">Get personalized guidance from experienced builders who've been there, done that.</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div id="card-1" class="bg-white p-8 rounded-xl border border-gray-100">
+                    <div class="mb-6">
+                        <i class="fa-solid fa-rocket text-3xl text-black"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">1:1 Mentorship</h3>
+                    <p class="text-gray-600 mb-6">Weekly sessions with experienced founders and builders.</p>
+                    <span class="text-black font-medium hover:underline cursor-pointer">Learn more →</span>
+                </div>
+                <div id="card-2" class="bg-white p-8 rounded-xl border border-gray-100">
+                    <div class="mb-6">
+                        <i class="fa-solid fa-code text-3xl text-black"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Technical Review</h3>
+                    <p class="text-gray-600 mb-6">Get your product architecture and code reviewed by experts.</p>
+                    <span class="text-black font-medium hover:underline cursor-pointer">Learn more →</span>
+                </div>
+                <div id="card-3" class="bg-white p-8 rounded-xl border border-gray-100">
+                    <div class="mb-6">
+                        <i class="fa-solid fa-chart-line text-3xl text-black"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Growth Strategy</h3>
+                    <p class="text-gray-600 mb-6">Data-driven approaches to scale your product effectively.</p>
+                    <span class="text-black font-medium hover:underline cursor-pointer">Learn more →</span>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <!-- About Us Section -->
-    <section id="about" class="container subscribe">
-        <div class="flex flex-col text-center md:mb-[123px] max-sm:mb-[85px] p-6 ">
-            <div class="flex items-center justify-center">
-            <h2 class="md:text-[36px] max-sm:text-[30px] font-[600] leading-[44px] mb-4">About Us</h2>
+    <section id="community" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="relative h-[500px]">
+                    <img class="absolute inset-0 rounded-2xl object-cover" src="assets/images/community.png" alt="diverse group of people collaborating in a modern workspace, with floating UI elements and creative energy, minimal style">
+                </div>
+                <div class="space-y-6">
+                    <h2 class="text-4xl font-bold">Join Our Community of Builders</h2>
+                    <p class="text-gray-600 text-lg">Connect with like-minded innovators, share experiences, and get the support you need to bring your ideas to life.</p>
+                    <div class="space-y-4">
+                        <div class="flex items-center gap-4">
+                            <i class="fa-solid fa-users text-2xl text-black"></i>
+                            <span class="text-lg">5,000+ Active Members</span>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <i class="fa-solid fa-message text-2xl text-black"></i>
+                            <span class="text-lg">24/7 Community Support</span>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <i class="fa-solid fa-video text-2xl text-black"></i>
+                            <span class="text-lg">Weekly Live Sessions</span>
+                        </div>
+                    </div>
+                    <button class="flex items-center px-8 py-4 bg-black text-white rounded-lg hover:bg-gray-800 transition-colors text-lg">
+                        <i class="fa-brands fa-slack mr-2"></i>
+                        Join Slack Community
+                    </button>
+                </div>
+            </div>
         </div>
-        <div class="flex items-center justify-center max-w-2xl mx-auto">
-            <p class="text-[#535862] text-center text-[20px]  ">We’re a team passionate about building solutions that work for us—and then sharing them with you. Dare to Build is about creating fast, dreaming big, and shipping boldly.</p>
-        </div>
-        
-        </div>
-
     </section>
 
-    <!-- Footer -->
-    <footer class="container border-t border-gray-200 py-4">
+    <footer id="footer" class="bg-gray-50 border-t border-gray-100">
         <div class=" mx-auto flex max-sm:flex-col justify-between my-[34px] items-center">
             <div class="flex items-center">
-                <img alt="DTB logo" class="h-7 w-[auto] hidden md:block" height="50" src="assets/images/dtb.png" width="50"/>
+                <img alt="DTB logo" class="h-7 w-[auto] hidden md:block" height="50" src="assets/images/dtb.png" width="50">
                
             </div>
             <div class="flex space-x-4 text-gray-600 max-md:ml-[126px] max-sm:ml-[0px] sm:ml-[0px] lg:ml-[219px]">
@@ -170,5 +205,9 @@
             </div>
         </div>
     </footer>
-</body>
-</html>
+
+    
+</div>
+              </body>
+            </html>
+          

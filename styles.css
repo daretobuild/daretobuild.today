@@ -1,18 +1,30 @@
 
+* {
+    font-family: "Inter", sans-serif;
+  }
 
-body {
-    
-    
-    line-height: 1.6;
-    overflow-x: hidden;
-    font-family:  'Instrument Sans';
-}
+  ::-webkit-scrollbar {
+    display: none;
+  }
 
 .container {
     max-width: 1100px;
     margin: 0 auto;
     padding: 0 20px;
 }
+
+.highlighted-section {
+    outline: 2px solid #3F20FB;
+    background-color: rgba(63, 32, 251, 0.1);
+  }
+
+  .edit-button {
+    position: absolute;
+    z-index: 1000;
+  }
+
+
+
 
 /* Header */
 header {
