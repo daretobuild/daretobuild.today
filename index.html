@@ -75,18 +75,26 @@
                     <span class="text-xl font-bold">DareToBuild</span>
                 </div>
                 <nav class="hidden md:flex space-x-8">
-                    <span class="text-gray-600 hover:text-black cursor-pointer">Newsletter</span>
-                    <span class="text-gray-600 hover:text-black cursor-pointer">Mentorship</span>
-                    <span class="text-gray-600 hover:text-black cursor-pointer">Community</span>
+                    <a href="#newsletter" class="text-gray-600 hover:text-black cursor-pointer">
+                        <span>Newsletter</span>
+                    </a>
+                    <a href="#mentorship" class="text-gray-600 hover:text-black cursor-pointer">
+                        <span>Mentorship</span>
+                    </a>
+                    <a href="#community" class="text-gray-600 hover:text-black cursor-pointer">
+                        <span>Community</span>
+                    </a>
                 </nav>
                 <div class="flex items-center space-x-4">
                     <button class="hidden md:block px-6 py-2 rounded-lg border border-gray-200 hover:border-black transition-colors">
                         Sign In
                     </button>
-                    <button class="flex items-center px-6 py-2 bg-black text-white rounded-lg hover:bg-gray-800 transition-colors">
-                        <i class="fa-brands fa-slack mr-2"></i>
-                        Join Slack
-                    </button>
+                    <a href="https://daretobuildworkspace.slack.com/" target="_blank" rel="noopener noreferrer">
+                        <button class="flex items-center px-6 py-2 bg-black text-white rounded-lg hover:bg-gray-800 transition-colors">
+                            <i class="fa-brands fa-slack mr-2"></i>
+                            Join Slack
+                        </button>
+                    </a>
                 </div>
             </div>
         </div>
@@ -101,19 +109,16 @@
 
     <section id="newsletter" class="py-20 bg-white">
         <div class="container mx-auto px-6">
-            <div class="grid md:grid-cols-2 gap-12 items-center">
-                <div class="space-y-6">
+            <div class="flex flex-col md:flex-row gap-12 items-center">
+                <div class="w-full order-1 md:order-2 h-full">
+                    <img class="w-full h-full rounded-2xl object-cover" src="assets/images/newsletter.png" alt="3D illustration of a futuristic newsletter concept with floating screens and AI elements, modern minimal style">
+                </div>
+                <div class="space-y-6 w-full order-2 md:order-1">
                     <h2 class="text-4xl font-bold">Stay Ahead with AI Insights</h2>
                     <p class="text-gray-600 text-lg">Get weekly curated insights about AI and product building delivered straight to your inbox.</p>
-                    <div class="flex gap-4">
-                        <input type="email" placeholder="Enter your email" class="flex-1 px-6 py-3 rounded-lg border border-gray-200 focus:border-black outline-none">
-                        <button class="px-8 py-3 bg-black text-white rounded-lg hover:bg-gray-800 transition-colors whitespace-nowrap">
-                            Subscribe Now
-                        </button>
+                    <div class="flex flex-col md:flex-row gap-4">
+                        <iframe class="flex-1" src="https://embeds.beehiiv.com/a5dbc1ed-9d47-4599-82c4-2270ac4a190a?slim=true" data-test-id="beehiiv-embed" height="52" frameborder="0" scrolling="no" style="margin: 0; border-radius: 0px !important; background-color: transparent;"></iframe>
                     </div>
-                </div>
-                <div class="relative h-[400px]">
-                    <img class="absolute inset-0 rounded-2xl object-cover" src="assets/images/newsletter.png" alt="3D illustration of a futuristic newsletter concept with floating screens and AI elements, modern minimal style">
                 </div>
             </div>
         </div>
@@ -132,7 +137,7 @@
                     </div>
                     <h3 class="text-xl font-bold mb-4">1:1 Mentorship</h3>
                     <p class="text-gray-600 mb-6">Weekly sessions with experienced founders and builders.</p>
-                    <span class="text-black font-medium hover:underline cursor-pointer">Learn more →</span>
+                    <!-- <span class="text-black font-medium hover:underline cursor-pointer">Learn more →</span> -->
                 </div>
                 <div id="card-2" class="bg-white p-8 rounded-xl border border-gray-100">
                     <div class="mb-6">
@@ -140,7 +145,7 @@
                     </div>
                     <h3 class="text-xl font-bold mb-4">Technical Review</h3>
                     <p class="text-gray-600 mb-6">Get your product architecture and code reviewed by experts.</p>
-                    <span class="text-black font-medium hover:underline cursor-pointer">Learn more →</span>
+                    <!-- <span class="text-black font-medium hover:underline cursor-pointer">Learn more →</span> -->
                 </div>
                 <div id="card-3" class="bg-white p-8 rounded-xl border border-gray-100">
                     <div class="mb-6">
@@ -148,7 +153,7 @@
                     </div>
                     <h3 class="text-xl font-bold mb-4">Growth Strategy</h3>
                     <p class="text-gray-600 mb-6">Data-driven approaches to scale your product effectively.</p>
-                    <span class="text-black font-medium hover:underline cursor-pointer">Learn more →</span>
+                    <!-- <span class="text-black font-medium hover:underline cursor-pointer">Learn more →</span> -->
                 </div>
             </div>
         </div>
@@ -156,38 +161,40 @@
 
     <section id="community" class="py-20 bg-white">
         <div class="container mx-auto px-6">
-            <div class="grid md:grid-cols-2 gap-12 items-center">
-                <div class="relative h-[500px]">
-                    <img class="absolute inset-0 rounded-2xl object-cover" src="assets/images/community.png" alt="diverse group of people collaborating in a modern workspace, with floating UI elements and creative energy, minimal style">
+            <div class="flex flex-col md:flex-row gap-12 items-center">
+                <div class="w-full order-1 md:order-2 h-full">
+                    <img class="w-full h-full rounded-2xl object-cover" src="assets/images/community.png" alt="diverse group of people collaborating in a modern workspace, with floating UI elements and creative energy, minimal style">
                 </div>
-                <div class="space-y-6">
+                <div class="space-y-6 w-full order-2 md:order-1">
                     <h2 class="text-4xl font-bold">Join Our Community of Builders</h2>
                     <p class="text-gray-600 text-lg">Connect with like-minded innovators, share experiences, and get the support you need to bring your ideas to life.</p>
                     <div class="space-y-4">
                         <div class="flex items-center gap-4">
                             <i class="fa-solid fa-users text-2xl text-black"></i>
-                            <span class="text-lg">5,000+ Active Members</span>
+                            <span class="text-lg">Product Building Guidance</span>
                         </div>
                         <div class="flex items-center gap-4">
                             <i class="fa-solid fa-message text-2xl text-black"></i>
-                            <span class="text-lg">24/7 Community Support</span>
+                            <span class="text-lg">Technical Discussions</span>
                         </div>
                         <div class="flex items-center gap-4">
                             <i class="fa-solid fa-video text-2xl text-black"></i>
                             <span class="text-lg">Weekly Live Sessions</span>
                         </div>
                     </div>
-                    <button class="flex items-center px-8 py-4 bg-black text-white rounded-lg hover:bg-gray-800 transition-colors text-lg">
-                        <i class="fa-brands fa-slack mr-2"></i>
-                        Join Slack Community
-                    </button>
+                    <a href="https://daretobuildworkspace.slack.com/" target="_blank" rel="noopener noreferrer">
+                        <button class="flex items-center px-8 py-4 bg-black text-white rounded-lg hover:bg-gray-800 transition-colors text-lg mt-4">
+                            <i class="fa-brands fa-slack mr-2"></i>
+                            Join Slack Community
+                        </button>
+                    </a>
                 </div>
             </div>
         </div>
     </section>
 
     <footer id="footer" class="bg-gray-50 border-t border-gray-100">
-        <div class=" mx-auto flex max-sm:flex-col justify-between my-[34px] items-center">
+        <div class="container mx-auto flex max-sm:flex-col justify-between py-[34px] items-center">
             <div class="flex items-center">
                 <img alt="DTB logo" class="h-7 w-[auto] hidden md:block" height="50" src="assets/images/dtb.png" width="50">
                
